@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "567286838174",
+    "project_id": "demoato-62407",
+    "storage_bucket": "demoato-62407.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567286838174:android:bcd5197f5d919354b6dc8f",
+        "android_client_info": {
+          "package_name": "com.yp.demoato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567286838174-vjv7aes5mqci6urakiqh8gh6i4p9spvs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yp.demoato",
+            "certificate_hash": "4209329aa28e7f9cb4da7cab217118d62ea96cb3"
+          }
+        },
+        {
+          "client_id": "567286838174-88o4c0h3rvo8d274u690u1dgo9a3k5uo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSLaKKIrFM8VgMFQsJ4UELW0hhcZjMFb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567286838174-88o4c0h3rvo8d274u690u1dgo9a3k5uo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="Language Preference" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="ಭಾಷೆಯ ಆದ್ಯತೆ" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical" >
+        <Spinner
+            android:id="@+id/spinnerlang"
+            android:layout_width="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_height="35dp"/>
+        <Button
+            android:id="@+id/btset"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="300dp"
+            android:layout_marginTop="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:textSize="18sp"
+            android:text="Set / ಸೆಟ್" />
+
+
+
+    </LinearLayout>
+</LinearLayout>
