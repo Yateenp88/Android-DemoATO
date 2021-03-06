@@ -35,7 +35,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserRegistration extends AppCompatActivity {
+public class DRForm1 extends AppCompatActivity {
     HttpURLConnection urlConnection = null;
     InputStream is=null;
     String result=null;
@@ -88,9 +88,9 @@ public class UserRegistration extends AppCompatActivity {
         txtgtmob.setText(getMobileNumber);
         //Below code for session set as per language code   START
         if (SessionManager.getLanguage(getApplicationContext()).length() != 0)
-            context = SessionManager.setLocale(UserRegistration.this , SessionManager.getLanguage(getApplicationContext()));
+            context = SessionManager.setLocale(DRForm1.this , SessionManager.getLanguage(getApplicationContext()));
         else
-            context = SessionManager.setLocale(UserRegistration.this , "en");
+            context = SessionManager.setLocale(DRForm1.this , "en");
         resources = context.getResources();
 
         txtreg.setText(resources.getString(R.string.registration));
@@ -107,7 +107,7 @@ public class UserRegistration extends AppCompatActivity {
         btstep1.setText(resources.getString(R.string.STEP_FIRST));
         //Below code for session set as per language code   END
         //Check Whether Driver already register or not-
-        checkDriverRegistration();
+
 }
 
 private void checkDriverRegistration(){
@@ -154,7 +154,7 @@ private void checkDriverRegistration(){
         if(jsonArray.length() == 1){
             //Toast.makeText(getApplicationContext(), "Main Profile" + getMobileNumber, Toast.LENGTH_LONG).show();
             //If Driver already register then
-            Intent myIntent = new Intent(getBaseContext(),   MainActivity.class);
+            Intent myIntent = new Intent(getBaseContext(),   DRForm2.class);
             myIntent.putExtra("authcode","Registered");
             startActivity(myIntent);
         } else {
@@ -188,6 +188,8 @@ private void checkDriverRegistration(){
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(networkCheckerListener, filter);
         //Internet check end--------
+        //check activity load whether driver basic info exist or not
+        checkDriverRegistration();
         super.onStart();
     }
 
@@ -229,12 +231,12 @@ private void checkDriverRegistration(){
                             if (!obj.getBoolean("error")) {
 
 
-                                Toast.makeText(UserRegistration.this,"Record Updated Successfully", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(DRForm1.this,"Record Updated Successfully", Toast.LENGTH_SHORT).show();
                                 Intent myIntent = new Intent(getBaseContext(),   MainActivity.class);
                                 myIntent.putExtra("authcode","Registered");
                                 startActivity(myIntent);
                             } else {
-                                Toast.makeText(UserRegistration.this,"Please Try Again Later!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(DRForm1.this,"Please Try Again Later!", Toast.LENGTH_SHORT).show();
                             }
 
                         } catch (JSONException e) {
@@ -248,7 +250,7 @@ private void checkDriverRegistration(){
                         progressDialog.dismiss();
                         //on error storing the name to sqlite with status unsynced
                         //saveNameToLocalStorage(obj.getString("username"),obj.getString("age"),obj.getDouble("latitude"),obj.getDouble("longitude"), NAME_NOT_SYNCED_WITH_SERVER);
-                        Toast.makeText(UserRegistration.this,"Failed To Connect.Please check INTERNET CONNECTION", Toast.LENGTH_LONG).show();
+                        Toast.makeText(DRForm1.this,"Failed To Connect.Please check INTERNET CONNECTION", Toast.LENGTH_LONG).show();
                     }
                 })
         {
@@ -272,4 +274,5 @@ private void checkDriverRegistration(){
 
         VolleySingleton.getInstance(this).addToRequestQueue(stringRequest);
     }
+
 }

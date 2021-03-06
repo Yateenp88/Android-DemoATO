@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <string name="selectlanguage">ಕನ್ನಡ</string>
-    <string name="language">ಮರಳಿ ಸ್ವಾಗತ</string>
-    <string name="language1">ಮರಳಿ ಸ್ವಾಗತ</string>
+    <string name="language">ಕನ್ನಡ</string>
+    <string name="langcode">kn</string>
+    <string name="app_name">DemoATO</string>
+    <string name="registration">ಸ್ವಯಂ ನೋಂದಣಿ</string>
+    <string name="vregistration">ವಾಹನ ನೋಂದಣಿ</string>
+    <string name="mobile">ಮೊಬೈಲ್</string>
+    <string name="fname">ಮೊದಲ ಹೆಸರು</string>
+    <string name="lname">ಕೊನೆಯ ಹೆಸರು</string>
+    <string name="emailid">ಇಮೇಲ್ ಐಡಿ</string>
+    <string name="gender">ಲಿಂಗ</string>
+    <string name="address">ವಿಳಾಸ</string>
+    <string name="city">ನಗರ</string>
+    <string name="pincode">ಪಿನ್ಕೋಡ್</string>
+    <string name="alternate_mobile">ಪರ್ಯಾಯ ಮೊಬೈಲ್</string>
+    <string name="STEP_FIRST">ಮೊದಲ ಹಂತ</string>
+    <string name="next">ಮುಂದಿನ</string>
+    <string name="submit">ಸಲ್ಲಿಸು</string>
+    <string name="uploadvdoc">ವಾಹನ ಡಾಕ್ಯುಮೆಂಟ್ ಅನ್ನು ಅಪ್ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="uploaddoc">ಡಾಕ್ಯುಮೆಂಟ್ ಅನ್ನು ಸ್ವಯಂ ಅಪ್ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="rcupload">ಆರ್ಸಿ ಅಪ್ಲೋಡ್</string>
+    <string name="upload">ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
+    <string name="adhrno">ಆಧಾರ್ ಕಾರ್ಡ್ ಸಂಖ್ಯೆ</string>
+    <string name="panno">ಪ್ಯಾನ್ ಕಾರ್ಡ್ ಸಂಖ್ಯೆ</string>
+    <string name="drno">ಚಾಲನಾ ಪರವಾನಿಗೆ</string>
+    <string name="vrno">ವಾಹನ ನೋಂದಣಿ ಸಂಖ್ಯೆ</string>
+    <string name="insdt">ವಿಮಾ ಮುಕ್ತಾಯ ದಿನಾಂಕ</string>
+    <string name="pucdt">ಪಿಯುಸಿ ಮುಕ್ತಾಯ ದಿನಾಂಕ</string>
 </resources>

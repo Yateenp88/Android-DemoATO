@@ -1,6 +1,30 @@
 <resources>
 
-    <string name="selectlanguage">English</string>
-    <string name="language">Welcome Back</string>
-    <string name="language1">ಮರಳಿ ಸ್ವಾಗತ</string>
+    <string name="language">English</string>
+    <string name="langcode">en</string>
+    <string name="app_name">DemoATO</string>
+    <string name="registration">Self Registration</string>
+    <string name="vregistration">Vehicle Registration</string>
+    <string name="mobile">Mobile</string>
+    <string name="fname">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="emailid">Email Id</string>
+    <string name="gender">Gender</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="pincode">Pincode</string>
+    <string name="alternate_mobile">Alternate Mobile</string>
+    <string name="STEP_FIRST">STEP FIRST</string>
+    <string name="next">NEXT</string>
+    <string name="submit">SUBMIT</string>
+    <string name="uploadvdoc">Upload Vehicle Document</string>
+    <string name="uploaddoc">Upload Self Document</string>
+    <string name="rcupload">RC Upload</string>
+    <string name="upload">Upload</string>
+    <string name="adhrno">Aadhar Card Number</string>
+    <string name="panno">Pan Card Number</string>
+    <string name="drno">Driving License </string>
+    <string name="vrno">Vehicle Registration Number</string>
+    <string name="insdt">Insurance Expiry Date</string>
+    <string name="pucdt">PUC Expiry Date</string>
 </resources>

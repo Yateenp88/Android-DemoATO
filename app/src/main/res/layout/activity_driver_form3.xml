@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txtregistration"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/vregistration"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtmobile"
+            android:layout_width="354dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/uploadvdoc"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etvreg"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="220dp"
+            android:hint="@string/vrno"
+            android:maxLength="10" />
+
+        <ImageView
+            android:id="@+id/imgvreg"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/ic_baseline_image_24"
+            android:layout_marginTop="280dp"/>
+        <Button
+            android:id="@+id/btvreg"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="290dp"
+            android:layout_marginLeft="180dp"
+            android:background="@drawable/backgroud_brown"
+            android:text="@string/rcupload"/>
+        <ImageView
+            android:id="@+id/imgvregst"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="345dp"
+            android:background="@drawable/ic_baseline_sync_24"
+            android:layout_marginTop="295dp"/>
+
+        <EditText
+            android:id="@+id/etins"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:hint="@string/insdt"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="360dp"/>
+        <ImageView
+            android:id="@+id/imgins"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/ic_baseline_image_24"
+            android:layout_marginTop="420dp"/>
+        <Button
+            android:id="@+id/btins"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="430dp"
+            android:layout_marginLeft="180dp"
+            android:background="@drawable/backgroud_brown"
+            android:text="@string/upload"/>
+        <ImageView
+            android:id="@+id/imginsst"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="345dp"
+            android:background="@drawable/ic_baseline_sync_24"
+            android:layout_marginTop="435dp"/>
+        <EditText
+            android:id="@+id/etpuc"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:hint="@string/pucdt"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="505dp"/>
+        <ImageView
+            android:id="@+id/imgpuc"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/ic_baseline_image_24"
+            android:layout_marginTop="560dp"/>
+        <Button
+            android:id="@+id/btpuc"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="567dp"
+            android:layout_marginLeft="180dp"
+            android:background="@drawable/backgroud_brown"
+            android:text="@string/upload"/>
+        <ImageView
+            android:id="@+id/imgaadharst"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="345dp"
+            android:background="@drawable/ic_baseline_sync_24"
+            android:layout_marginTop="575dp"/>
+
+        <Button
+            android:id="@+id/btstep2"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="645dp"
+            android:background="@drawable/backgroud_green"
+            android:onClick="saveDriverDocument"
+            android:text="@string/submit"
+            android:textColor="@color/colorOnPrimaryDemo" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
