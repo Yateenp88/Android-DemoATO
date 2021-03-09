@@ -50,7 +50,7 @@ public class CheckDRProfile extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
         try {
 
-            URL url = new URL("http://feeds.expressindia.com/test/syncDriverInfo.php?id="+getMobileNumber+"&&lnc="+getlangauge);
+            URL url = new URL("http://feeds.expressindia.com/test/checkDriverFormFullStatus.php?mob="+getMobileNumber);
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("POST");
             urlConnection.connect();

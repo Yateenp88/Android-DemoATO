@@ -43,19 +43,30 @@
             android:hint="@string/adhrno"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="80dp"/>
+
         <ImageView
-            android:id="@+id/imgaadhar"
+            android:id="@+id/imageView"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginLeft="25dp"
-            android:background="@drawable/ic_baseline_image_24"
-            android:layout_marginTop="140dp"/>
-        <Button
-            android:id="@+id/btaadhar"
+            android:background="@drawable/ic_baseline_photo_camera_24"
+            android:layout_marginTop="140dp"
+            android:clickable="true" />
+        <TextView
             android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="150dp"
+            android:layout_height="30dp"
+            android:text="@string/adphoto"
+            android:textSize="18sp"
+
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="180dp"/>
+        <Button
+            android:id="@+id/btaad"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="165dp"
             android:layout_marginLeft="180dp"
+            android:textColor="@color/colorPrimaryLightDemo"
             android:background="@drawable/backgroud_brown"
             android:text="@string/upload"/>
         <ImageView
@@ -63,7 +74,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="345dp"
-            android:background="@drawable/ic_baseline_sync_24"
+            android:background="@drawable/ic_baseline_cloud_upload_24"
             android:layout_marginTop="155dp"/>
 
         <EditText
@@ -79,14 +90,24 @@
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginLeft="25dp"
-            android:background="@drawable/ic_baseline_image_24"
-            android:layout_marginTop="280dp"/>
+            android:layout_marginTop="280dp"
+            android:background="@drawable/ic_baseline_photo_camera_24"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:text="@string/pnphoto"
+            android:textSize="18sp"
+
+            android:layout_marginTop="280dp"
+            android:layout_marginLeft="180dp"/>
         <Button
             android:id="@+id/btpan"
             android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="290dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="305dp"
             android:layout_marginLeft="180dp"
+            android:textColor="@color/colorPrimaryLightDemo"
             android:background="@drawable/backgroud_brown"
             android:text="@string/upload"/>
         <ImageView
@@ -94,7 +115,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="345dp"
-            android:background="@drawable/ic_baseline_sync_24"
+            android:background="@drawable/ic_baseline_cloud_upload_24"
             android:layout_marginTop="295dp"/>
 
         <EditText
@@ -104,19 +125,30 @@
             android:hint="@string/drno"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="360dp"/>
+
         <ImageView
             android:id="@+id/imgdrv"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:layout_marginLeft="25dp"
-            android:background="@drawable/ic_baseline_image_24"
-            android:layout_marginTop="420dp"/>
-        <Button
-            android:id="@+id/btdrv"
+            android:layout_marginTop="420dp"
+            android:background="@drawable/ic_baseline_photo_camera_24"
+            android:clickable="true" />
+        <TextView
             android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="430dp"
+            android:layout_height="30dp"
+            android:text="@string/drphoto"
+            android:textSize="18sp"
+
+            android:layout_marginTop="420dp"
+            android:layout_marginLeft="180dp"/>
+        <Button
+            android:id="@+id/btdri"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="445dp"
             android:layout_marginLeft="180dp"
+            android:textColor="@color/colorPrimaryLightDemo"
             android:background="@drawable/backgroud_brown"
             android:text="@string/upload"/>
         <ImageView
@@ -124,27 +156,54 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="345dp"
-            android:background="@drawable/ic_baseline_sync_24"
+            android:background="@drawable/ic_baseline_cloud_upload_24"
             android:layout_marginTop="435dp"/>
 
         <ImageView
             android:id="@+id/imgpic"
             android:layout_width="150dp"
             android:layout_height="120dp"
-            android:layout_marginLeft="115dp"
-            android:background="@drawable/ic_baseline_assignment_ind_24"
-            android:layout_marginTop="520dp"/>
-
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="520dp"
+            android:background="@drawable/ic_baseline_photo_camera_24"
+            android:clickable="true" />
+        <ImageView
+            android:id="@+id/imgpicst"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="345dp"
+            android:background="@drawable/ic_baseline_cloud_upload_24"
+            android:layout_marginTop="545dp"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:text="@string/selfphoto"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:layout_marginTop="550dp"
+            android:layout_marginLeft="180dp"/>
         <Button
-            android:id="@+id/btstep2"
+            android:id="@+id/btpic"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="580dp"
+            android:layout_marginLeft="180dp"
+            android:textColor="@color/colorPrimaryLightDemo"
+            android:background="@drawable/backgroud_brown"
+            android:text="@string/upload"/>
+        <Button
+            android:id="@+id/btselfdoc"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="645dp"
-            android:background="@drawable/backgroud_green"
+            android:background="@drawable/backgroud_brown"
+
             android:onClick="saveDriverDocument"
             android:text="@string/next"
             android:textColor="@color/colorOnPrimaryDemo" />
+
+
     </RelativeLayout>
 
 

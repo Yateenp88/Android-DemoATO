@@ -21,23 +21,23 @@ public class DBHelper extends SQLiteOpenHelper {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
-    private static final String CREATE_USER_REGISTRATION = "CREATE TABLE " + TABLE_USER_REGISTRATION
+    private static final String CREATE_DRIVER_REGISTRATION = "CREATE TABLE " + TABLE_USER_REGISTRATION
             + "(" + COLUMN_ID +
             " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_SERVERID + " INTEGER UNIQUE," + "FNAME" +
             " VARCHAR, " + "LNAME" + " VARCHAR," + "EMAILID" + " VARCHAR," + "GENDER" + " VARCHAR," +"CITY" + " VARCHAR," +
             "PINCODE" + " INTEGER," + "ALTMOBILE" + " INTERGER," + COLUMN_STATUS +
             " TINYINT);";
 
-    private static final String CREATE_USER_LANG = "CREATE TABLE " + TABLE_USER_LANG
+    private static final String CREATE_DRIVER_LANG = "CREATE TABLE " + TABLE_USER_LANG
             + "(" + COLUMN_ID +
-            " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_SERVERID + " INTEGER UNIQUE," + "LANG" +
-            " VARCHAR, " + "CODE" + " INTERGER," + COLUMN_STATUS +
+            " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_SERVERID + " VARCHAR ," + "LANG" +
+            " VARCHAR, " + "MOB" + " INTERGER UNIQUE," + COLUMN_STATUS +
             " TINYINT);";
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_USER_LANG);
-        db.execSQL(CREATE_USER_REGISTRATION);
+        db.execSQL(CREATE_DRIVER_LANG);
+        db.execSQL(CREATE_DRIVER_REGISTRATION);
     }
 
     @Override
@@ -56,7 +56,28 @@ public class DBHelper extends SQLiteOpenHelper {
      * 0 means the name is synced with the server
      * 1 means the name is not synced with the server
      * */
-   // public boolean addName(String sid,String name,String age,double latitude,double longitude, int status) {
+    public boolean addDriverLang(String sid,String mob, String lang,int status) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_SERVERID, sid);
+        contentValues.put("MOB", mob);
+        contentValues.put("LANG", lang);
+        contentValues.put(COLUMN_STATUS, status);
+         db.insert(TABLE_USER_LANG, null, contentValues);
+         db.close();
+         return true;
+    }
+
+    public boolean updateDriverLang(String lang, int mob) {
+         SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("LANG", lang);
+         db.update(TABLE_USER_LANG, contentValues, "MOB" + "=" + mob, null);
+         db.close();
+         return true;
+        }
+
+    // public boolean addName(String sid,String name,String age,double latitude,double longitude, int status) {
         //SQLiteDatabase db = this.getWritableDatabase();
         //ContentValues contentValues = new ContentValues();
         //contentValues.put(COLUMN_SERVERID, sid);

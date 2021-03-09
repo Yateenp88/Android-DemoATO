@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
@@ -45,13 +46,16 @@ public class DRForm1 extends AppCompatActivity {
     TextView txtreg,txtmob,txtgtmob,txtfname,txtlname,txtemail,txtgender,txtaddress,txtpincode,txtcity,txtalmob,txtstepfirst;
     Button btstep1;
     EditText etfname,etlname,etemail,etgender,etaddress,etcity,etpincode,etalmob;
-    String getlangauge, getMobileNumber;
+    String getlangauge, getMobileNumber,getsid;
     public static final String URL_SAVE_DRIVERPROFILE = "http://feeds.expressindia.com/test/saveDriverInfo.php";
     //database helper object
     private DBHelper db;
 
-
-
+    // variable for shared preferences.
+    SharedPreferences sharedpreferences;
+    String Lancode,Mobileno,Sid;
+    // key for storing password.
+    public static final String SID = "SID";
     //Internet check start
     NetworkCheckerListener networkCheckerListener = new NetworkCheckerListener();
     //Internet check end
@@ -60,8 +64,15 @@ public class DRForm1 extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_user);
-        getMobileNumber = getIntent().getStringExtra("authcode");
-        getlangauge = getIntent().getStringExtra("langcode");
+        // initializing our shared preferences.
+        sharedpreferences = getSharedPreferences(LangBar.SHARED_PREFS, Context.MODE_PRIVATE);
+        // getting data from shared prefs and
+        getlangauge = sharedpreferences.getString(LangBar.LANCODE, null);
+        getMobileNumber = sharedpreferences.getString(LangBar.MOBILENO, null);
+
+        Sid = sharedpreferences.getString(Sid, null);
+
+        //End shareprefernec
         btstep1 =(Button) findViewById(R.id.btstep1);
         txtreg = (TextView) findViewById(R.id.txtregistration);
         txtmob = (TextView) findViewById(R.id.txtmobile);
@@ -220,6 +231,7 @@ private void checkDriverRegistration(){
         final String city = etcity.getText().toString().trim();
         final String pincode = etpincode.getText().toString().trim();
         final String mobile = txtgtmob.getText().toString().trim();
+
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_SAVE_DRIVERPROFILE,
                 new Response.Listener<String>() {
                     @Override
@@ -229,10 +241,14 @@ private void checkDriverRegistration(){
                         try {
                             JSONObject obj = new JSONObject(response);
                             if (!obj.getBoolean("error")) {
-
-
+                                getsid = obj.getString("sidno");
+                                SharedPreferences.Editor editor = sharedpreferences.edit();
+                                editor.putString(SID, getsid);
+                                // to save our data with key and value.
+                                editor.apply();
+                                //End SharePreference
                                 Toast.makeText(DRForm1.this,"Record Updated Successfully", Toast.LENGTH_SHORT).show();
-                                Intent myIntent = new Intent(getBaseContext(),   MainActivity.class);
+                                Intent myIntent = new Intent(getBaseContext(),   DRForm2.class);
                                 myIntent.putExtra("authcode","Registered");
                                 startActivity(myIntent);
                             } else {

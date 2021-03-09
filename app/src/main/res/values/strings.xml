@@ -19,8 +19,15 @@
     <string name="submit">SUBMIT</string>
     <string name="uploadvdoc">Upload Vehicle Document</string>
     <string name="uploaddoc">Upload Self Document</string>
-    <string name="rcupload">RC Upload</string>
+    <string name="rcupload">Upload</string>
     <string name="upload">Upload</string>
+    <string name="adphoto">Aadhar Photo</string>
+    <string name="pnphoto">Pancard Photo</string>
+    <string name="drphoto">License Photo</string>
+    <string name="selfphoto">Selfie Photo</string>
+    <string name="rcphoto">RC Photo</string>
+    <string name="inphoto">Insurance Photo</string>
+    <string name="puphoto">PUC Photo</string>
     <string name="adhrno">Aadhar Card Number</string>
     <string name="panno">Pan Card Number</string>
     <string name="drno">Driving License </string>

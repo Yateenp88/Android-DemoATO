@@ -36,38 +36,67 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
-
+        <Spinner
+            android:id="@+id/spmake"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:background="@color/colorOnPrimaryLightGray"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="105dp"/>
+        <Spinner
+            android:id="@+id/spmodel"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:background="@color/colorOnPrimaryLightGray"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="163dp"/>
+        <Spinner
+            android:id="@+id/sptype"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:background="@color/colorOnPrimaryLightGray"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="220dp"/>
         <EditText
             android:id="@+id/etvreg"
             android:layout_width="340dp"
             android:layout_height="60dp"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="270dp"
             android:hint="@string/vrno"
             android:maxLength="10" />
 
         <ImageView
             android:id="@+id/imgvreg"
             android:layout_width="150dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_marginLeft="25dp"
-            android:background="@drawable/ic_baseline_image_24"
-            android:layout_marginTop="280dp"/>
+            android:layout_marginTop="330dp"
+            android:background="@drawable/ic_baseline_photo_camera_24"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:text="@string/rcphoto"
+            android:textSize="18sp"
+            android:layout_marginTop="330dp"
+            android:layout_marginLeft="180dp"/>
         <Button
             android:id="@+id/btvreg"
             android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="290dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="353dp"
             android:layout_marginLeft="180dp"
+            android:textColor="@color/colorPrimaryLightDemo"
             android:background="@drawable/backgroud_brown"
             android:text="@string/rcupload"/>
         <ImageView
             android:id="@+id/imgvregst"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="345dp"
-            android:background="@drawable/ic_baseline_sync_24"
-            android:layout_marginTop="295dp"/>
+            android:background="@drawable/ic_baseline_cloud_upload_24"
+            android:layout_marginTop="335dp"/>
 
         <EditText
             android:id="@+id/etins"
@@ -75,65 +104,85 @@
             android:layout_height="60dp"
             android:hint="@string/insdt"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="360dp"/>
+            android:layout_marginTop="400dp"/>
+
         <ImageView
             android:id="@+id/imgins"
             android:layout_width="150dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_marginLeft="25dp"
-            android:background="@drawable/ic_baseline_image_24"
-            android:layout_marginTop="420dp"/>
+            android:layout_marginTop="460dp"
+            android:background="@drawable/ic_baseline_photo_camera_24"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:text="@string/inphoto"
+            android:textSize="16sp"
+            android:layout_marginTop="457dp"
+            android:layout_marginLeft="180dp"/>
         <Button
             android:id="@+id/btins"
             android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="430dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="482dp"
             android:layout_marginLeft="180dp"
+            android:textColor="@color/colorPrimaryLightDemo"
             android:background="@drawable/backgroud_brown"
             android:text="@string/upload"/>
         <ImageView
             android:id="@+id/imginsst"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="345dp"
-            android:background="@drawable/ic_baseline_sync_24"
-            android:layout_marginTop="435dp"/>
+            android:background="@drawable/ic_baseline_cloud_upload_24"
+            android:layout_marginTop="465dp"/>
         <EditText
             android:id="@+id/etpuc"
             android:layout_width="340dp"
             android:layout_height="60dp"
             android:hint="@string/pucdt"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="505dp"/>
+            android:layout_marginTop="530dp"/>
+
         <ImageView
             android:id="@+id/imgpuc"
             android:layout_width="150dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_marginLeft="25dp"
-            android:background="@drawable/ic_baseline_image_24"
-            android:layout_marginTop="560dp"/>
+            android:layout_marginTop="590dp"
+            android:background="@drawable/ic_baseline_photo_camera_24"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:text="@string/puphoto"
+            android:textSize="18sp"
+            android:layout_marginTop="589dp"
+            android:layout_marginLeft="180dp"/>
         <Button
             android:id="@+id/btpuc"
             android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="567dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="613dp"
             android:layout_marginLeft="180dp"
+            android:textColor="@color/colorPrimaryLightDemo"
             android:background="@drawable/backgroud_brown"
             android:text="@string/upload"/>
         <ImageView
             android:id="@+id/imgaadharst"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
             android:layout_marginLeft="345dp"
-            android:background="@drawable/ic_baseline_sync_24"
-            android:layout_marginTop="575dp"/>
+            android:background="@drawable/ic_baseline_cloud_upload_24"
+            android:layout_marginTop="599dp"/>
 
         <Button
             android:id="@+id/btstep2"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="645dp"
+            android:layout_marginTop="665dp"
             android:background="@drawable/backgroud_green"
             android:onClick="saveDriverDocument"
             android:text="@string/submit"
