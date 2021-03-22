@@ -24,18 +24,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/txtmobile"
-            android:layout_width="354dp"
-            android:layout_height="30dp"
+        <Spinner
+            android:id="@+id/spstand"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:background="@color/colorOnPrimaryLightGray"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="50dp"
-            android:text="@string/uploadvdoc"
-
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:layout_marginTop="50dp"/>
         <Spinner
             android:id="@+id/spmake"
             android:layout_width="340dp"
@@ -64,7 +59,7 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="270dp"
             android:hint="@string/vrno"
-            android:maxLength="10" />
+             />
 
         <ImageView
             android:id="@+id/imgvreg"
@@ -75,6 +70,7 @@
             android:background="@drawable/ic_baseline_photo_camera_24"
             android:clickable="true" />
         <TextView
+            android:id="@+id/rcphoto"
             android:layout_width="150dp"
             android:layout_height="25dp"
             android:text="@string/rcphoto"
@@ -104,7 +100,10 @@
             android:layout_height="60dp"
             android:hint="@string/insdt"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="400dp"/>
+            android:layout_marginTop="400dp"
+            android:ems="10"
+            android:inputType="date"
+            android:focusable="false"/>
 
         <ImageView
             android:id="@+id/imgins"
@@ -115,6 +114,7 @@
             android:background="@drawable/ic_baseline_photo_camera_24"
             android:clickable="true" />
         <TextView
+            android:id="@+id/insphoto"
             android:layout_width="150dp"
             android:layout_height="25dp"
             android:text="@string/inphoto"
@@ -143,7 +143,10 @@
             android:layout_height="60dp"
             android:hint="@string/pucdt"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="530dp"/>
+            android:layout_marginTop="530dp"
+            android:ems="10"
+            android:inputType="date"
+            android:focusable="false"/>
 
         <ImageView
             android:id="@+id/imgpuc"
@@ -154,6 +157,7 @@
             android:background="@drawable/ic_baseline_photo_camera_24"
             android:clickable="true" />
         <TextView
+            android:id="@+id/pucphoto"
             android:layout_width="150dp"
             android:layout_height="25dp"
             android:text="@string/puphoto"
@@ -170,7 +174,7 @@
             android:background="@drawable/backgroud_brown"
             android:text="@string/upload"/>
         <ImageView
-            android:id="@+id/imgaadharst"
+            android:id="@+id/imgpucst"
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:layout_marginLeft="345dp"
@@ -178,13 +182,13 @@
             android:layout_marginTop="599dp"/>
 
         <Button
-            android:id="@+id/btstep2"
+            android:id="@+id/btstep3"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="665dp"
             android:background="@drawable/backgroud_green"
-            android:onClick="saveDriverDocument"
+            android:onClick="saveDriverVehicle"
             android:text="@string/submit"
             android:textColor="@color/colorOnPrimaryDemo" />
     </RelativeLayout>

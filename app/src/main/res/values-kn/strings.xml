@@ -4,11 +4,13 @@
     <string name="language">ಕನ್ನಡ</string>
     <string name="langcode">kn</string>
     <string name="app_name">DemoATO</string>
+    <string name="penregistration">ನೋಂದಣಿ ಸ್ಥಿತಿ</string>
     <string name="registration">ಸ್ವಯಂ ನೋಂದಣಿ</string>
     <string name="vregistration">ವಾಹನ ನೋಂದಣಿ</string>
     <string name="mobile">ಮೊಬೈಲ್</string>
     <string name="fname">ಮೊದಲ ಹೆಸರು</string>
     <string name="lname">ಕೊನೆಯ ಹೆಸರು</string>
+    <string name="dob">ಹುಟ್ಟಿದ ದಿನಾಂಕ</string>
     <string name="emailid">ಇಮೇಲ್ ಐಡಿ</string>
     <string name="gender">ಲಿಂಗ</string>
     <string name="address">ವಿಳಾಸ</string>
@@ -16,8 +18,10 @@
     <string name="pincode">ಪಿನ್ಕೋಡ್</string>
     <string name="alternate_mobile">ಪರ್ಯಾಯ ಮೊಬೈಲ್</string>
     <string name="STEP_FIRST">ಮೊದಲ ಹಂತ</string>
+    <string name="final1">FINAL</string>
     <string name="next">ಮುಂದಿನ</string>
     <string name="submit">ಸಲ್ಲಿಸು</string>
+
     <string name="uploadvdoc">ವಾಹನ ಡಾಕ್ಯುಮೆಂಟ್ ಅನ್ನು ಅಪ್ಲೋಡ್ ಮಾಡಿ</string>
     <string name="uploaddoc">ಡಾಕ್ಯುಮೆಂಟ್ ಅನ್ನು ಸ್ವಯಂ ಅಪ್ಲೋಡ್ ಮಾಡಿ</string>
     <string name="rcupload">ಅಪ್ಲೋಡ್</string>
@@ -35,4 +39,32 @@
     <string name="vrno">ವಾಹನ ನೋಂದಣಿ ಸಂಖ್ಯೆ</string>
     <string name="insdt">ವಿಮಾ ಮುಕ್ತಾಯ ದಿನಾಂಕ</string>
     <string name="pucdt">ಪಿಯುಸಿ ಮುಕ್ತಾಯ ದಿನಾಂಕ</string>
+    <string name="vt">ವಾಹನ ಪ್ರಕಾರ</string>
+    <string name="cng">ಸಿಎನ್‌ಜಿ</string>
+    <string name="disel">ನಿರಾಕರಿಸು</string>
+    <string name="elec">ಎಲೆಕ್ಟ್ರಿಕ್</string>
+    <string name="petrol">ಪೆಟ್ರೋಲ್</string>
+    <string name="bankdetail">ಬ್ಯಾಂಕಿಂಗ್ ವಿವರಗಳು</string>
+    <string name="bankaccname">ಬ್ಯಾಂಕ್ ಖಾತೆ ಹೆಸರು</string>
+    <string name="bankaccnum">ಖಾತೆ ಸಂಖ್ಯೆ</string>
+    <string name="bankbranch">ಶಾಖೆ</string>
+    <string name="bankifsc">ಐಎಫ್‌ಎಸ್‌ಸಿ ಸಂಖ್ಯೆ</string>
+    <string name="bankname">ಬ್ಯಾಂಕ್ ಹೆಸರು</string>
+    <string name="vmake">ವಾಹನ ತಯಾರಕ</string>
+    <string name="vmodel">ಮಾದರಿ</string>
+    <string name="stand">ಆಯ್ಕೆ ಮಾಡಿ ನಿಂತುಕೊಳ್ಳಿ</string>
+    <string name="stand1">ಹಳೆಯ ಶಹಾಬಾದ್ ನಿಂತುಕೊಳ್ಳಿ</string>
+    <string name="stand2">ಜೈ ಕರ್ನಾಟಕ ನಿಂತುಕೊಳ್ಳಿ</string>
+    <string name="stand3">ಜಯನಗರ ನಿಂತುಕೊಳ್ಳಿ</string>
+    <string name="passbook">ಪಾಸ್ಬುಕ್ ಫೋಟೋ</string>
+    <string name="status1">ಸ್ವಯಂ ವಿವರಗಳು</string>
+    <string name="status2">ಸ್ವಯಂ ದಾಖಲೆ</string>
+    <string name="status3">ವಾಹನ ದಾಖಲೆ</string>
+    <string name="myloc">ನನ್ನ ಸ್ಥಳ</string>
+    <string name="status4">ಬ್ಯಾಂಕಿಂಗ್ ವಿವರಗಳು</string>
+    <string name="duty">ಕೆಲಸ</string>
+    <string name="standplate">ನಿಂತುಕೊಳ್ಳಿ</string>
+    <string name="username">ಬಳಕೆದಾರ ಹೆಸರು</string>
+    <string name="password">ಗುಪ್ತಪದ</string>
+    <string name="login">ಲಾಗಿನ್</string>
 </resources>

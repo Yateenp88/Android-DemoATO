@@ -1,5 +1,7 @@
 package com.yp.demoato;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +14,7 @@ import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,24 +36,26 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DRForm1 extends AppCompatActivity {
+public class DRForm1 extends AppCompatActivity implements View.OnClickListener{
+
     HttpURLConnection urlConnection = null;
     InputStream is=null;
     String result=null;
     String line=null;
     Context context;
     Resources resources;
-    TextView txtreg,txtmob,txtgtmob,txtfname,txtlname,txtemail,txtgender,txtaddress,txtpincode,txtcity,txtalmob,txtstepfirst;
+    TextView txtreg,txtmob,txtgtmob,txtfname,txtlname,txtdob,txtemail,txtgender,txtaddress,txtpincode,txtcity,txtalmob,txtstepfirst;
     Button btstep1;
-    EditText etfname,etlname,etemail,etgender,etaddress,etcity,etpincode,etalmob;
+    EditText etfname,etlname,etemail,etdob,etgender,etaddress,etcity,etpincode,etalmob;
     String getlangauge, getMobileNumber,getsid;
     public static final String URL_SAVE_DRIVERPROFILE = "http://feeds.expressindia.com/test/saveDriverInfo.php";
     //database helper object
     private DBHelper db;
-
+    private int mYear, mMonth, mDay, mHour, mMinute;
     // variable for shared preferences.
     SharedPreferences sharedpreferences;
     String Lancode,Mobileno,Sid;
@@ -73,9 +78,13 @@ public class DRForm1 extends AppCompatActivity {
         Sid = sharedpreferences.getString(Sid, null);
 
         //End shareprefernec
+        //initializing views and objects
+        db = new DBHelper(this);
+
         btstep1 =(Button) findViewById(R.id.btstep1);
         txtreg = (TextView) findViewById(R.id.txtregistration);
         txtmob = (TextView) findViewById(R.id.txtmobile);
+        txtdob= (TextView) findViewById(R.id.editdob);
         txtfname = (TextView) findViewById(R.id.editfname);
         txtlname = (TextView) findViewById(R.id.editlname);
         txtemail = (TextView) findViewById(R.id.editemail);
@@ -89,6 +98,7 @@ public class DRForm1 extends AppCompatActivity {
 
         etfname = (EditText) findViewById(R.id.editfname);
         etlname = (EditText) findViewById(R.id.editlname);
+        etdob = (EditText) findViewById(R.id.editdob);
         etemail = (EditText) findViewById(R.id.editemail);
         etgender = (EditText) findViewById(R.id.editgender);
         etaddress = (EditText) findViewById(R.id.editaddress);
@@ -108,6 +118,7 @@ public class DRForm1 extends AppCompatActivity {
         txtmob.setText(resources.getString(R.string.mobile));
         txtfname.setHint(resources.getString(R.string.fname));
         txtlname.setHint(resources.getString(R.string.lname));
+       txtdob.setHint(resources.getString(R.string.dob));
         txtemail.setHint(resources.getString(R.string.emailid));
         txtgender.setHint(resources.getString(R.string.gender));
         txtaddress.setHint(resources.getString(R.string.address));
@@ -118,10 +129,11 @@ public class DRForm1 extends AppCompatActivity {
         btstep1.setText(resources.getString(R.string.STEP_FIRST));
         //Below code for session set as per language code   END
         //Check Whether Driver already register or not-
-
+        etdob.setOnClickListener(this);
 }
 
-private void checkDriverRegistration(){
+
+    private void checkDriverRegistration(){
     //Check Whether Driver already register or not-------------------------------START------------------------------------------------------
     StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
     StrictMode.setThreadPolicy(policy);
@@ -136,7 +148,7 @@ private void checkDriverRegistration(){
     catch (Exception e)
     {
         Log.e("Fail 1", e.toString());
-        Toast.makeText(getApplicationContext(), "Fail 1"+e.toString(), Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(), "Fail 1"+e.toString(), Toast.LENGTH_LONG).show();
     }
 
     try
@@ -153,7 +165,7 @@ private void checkDriverRegistration(){
     catch(Exception e)
     {
         Log.e("Fail 2", e.toString());
-        Toast.makeText(getApplicationContext(), "Fail 2"+e.toString(), Toast.LENGTH_LONG).show();
+      //  Toast.makeText(getApplicationContext(), "Fail 2"+e.toString(), Toast.LENGTH_LONG).show();
     }
 
     try
@@ -185,7 +197,7 @@ private void checkDriverRegistration(){
     {
 
         Log.e("Fail 3", e.toString());
-        Toast.makeText(getApplicationContext(), "Fail 3"+e.toString(), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), "Fail 3"+e.toString(), Toast.LENGTH_LONG).show();
 
     }
 
@@ -224,6 +236,7 @@ private void checkDriverRegistration(){
 
         final String fname = etfname.getText().toString().trim();
         final String lname = etlname.getText().toString().trim();
+        final String dob = etdob.getText().toString().trim();
         final String altmobile = etalmob.getText().toString().trim();
         final String gender = etgender.getText().toString().trim();
         final String email = etemail.getText().toString().trim();
@@ -247,6 +260,9 @@ private void checkDriverRegistration(){
                                 // to save our data with key and value.
                                 editor.apply();
                                 //End SharePreference
+
+                                db.addDriverInfo(getsid,mobile,fname,lname,email,gender,addr,city,pincode,altmobile,dob,1);
+
                                 Toast.makeText(DRForm1.this,"Record Updated Successfully", Toast.LENGTH_SHORT).show();
                                 Intent myIntent = new Intent(getBaseContext(),   DRForm2.class);
                                 myIntent.putExtra("authcode","Registered");
@@ -276,6 +292,7 @@ private void checkDriverRegistration(){
                 Map<String, String> params = new HashMap<>();
                 params.put("lname", lname);
                 params.put("fname", fname);
+                params.put("dob", dob);
                 params.put("mob", mobile);
                 params.put("gender", gender);
                 params.put("email", email);
@@ -291,4 +308,34 @@ private void checkDriverRegistration(){
         VolleySingleton.getInstance(this).addToRequestQueue(stringRequest);
     }
 
-}
+    @Override
+    public void onClick(View v) {
+        if (v == etdob) {
+
+            // Get Current Date
+            final Calendar c = Calendar.getInstance();
+            c.add(Calendar.YEAR, -18);
+            mYear = c.get(Calendar.YEAR);
+            mMonth = c.get(Calendar.MONTH);
+            mDay = c.get(Calendar.DAY_OF_MONTH);
+
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this,
+                    new DatePickerDialog.OnDateSetListener() {
+
+                        @Override
+                        public void onDateSet(DatePicker view, int year,
+                                              int monthOfYear, int dayOfMonth) {
+
+                            etdob.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+
+                        }
+                    }, mYear, mMonth, mDay);
+            datePickerDialog.getDatePicker().setMaxDate(c.getTimeInMillis());
+            datePickerDialog.show();
+        }
+
+    }
+
+    }
+

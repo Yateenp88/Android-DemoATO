@@ -13,9 +13,25 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAFivNgaqYW3GCq_8yjKqnEeiTXDij-BwY" />
         <activity android:name=".Otp_Verify"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".DRLogin"
+            android:parentActivityName=".LangBar"
+            ></activity>
+        <activity android:name=".Pending"
+            android:parentActivityName=".LangBar"
+            ></activity>
+        <activity android:name=".DRForm4"
+            android:parentActivityName=".LangBar"
+            ></activity>
+        <activity android:name=".DRForm3"
+            android:parentActivityName=".LangBar"
+            ></activity>
         <activity android:name=".DRForm2"
                 android:parentActivityName=".LangBar"
             ></activity>
@@ -35,6 +51,9 @@
         <activity android:name=".MainActivity"
             android:parentActivityName=".LangBar"
             ></activity>
+        <activity android:name="com.yp.demoato.DRMap"
+
+        android:value="ca-app-pub-"></activity>
 
     </application>
 

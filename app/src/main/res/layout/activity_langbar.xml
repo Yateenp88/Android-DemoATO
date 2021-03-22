@@ -31,6 +31,7 @@
 <EditText
     android:id="@+id/editgetmob"
     android:layout_width="300dp"
+    android:text="9900000002"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
     android:layout_marginLeft="50dp"/>

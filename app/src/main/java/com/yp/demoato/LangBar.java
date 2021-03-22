@@ -154,7 +154,7 @@ public class LangBar extends AppCompatActivity  {
 
             SharedPreferences.Editor editor = sharedpreferences.edit();
             // below two lines will put values for
-            // email and password in shared preferences.
+            // languagecode and mobile in shared preferences.
             editor.putString(LANCODE, langstatus);
             editor.putString(MOBILENO, getmobile);
             // to save our data with key and value.

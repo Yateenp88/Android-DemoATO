@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <Button
+        android:id="@+id/btnShowLocation2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:onClick="btngpstracker"
+        android:text="Button" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    </RelativeLayout>
+    <Switch
+        android:id="@+id/switchDuty"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="271dp"
+        android:checked="false"
+        android:textOff="No"
+        android:textOn="Yes"
+        android:text="  Duty" />
+    <TextView
+        android:id="@+id/txtonoff"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:text="OFF"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="81dp"
+        android:layout_marginLeft="361dp"/>
+    <fragment
+        android:id="@+id/mapDriverView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="579dp"
+        android:layout_marginTop="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</RelativeLayout>

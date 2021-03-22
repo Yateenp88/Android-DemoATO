@@ -8,12 +8,12 @@
     android:orientation="horizontal">
 
     <TextView
-        android:id="@+id/txtregistration"
+        android:id="@+id/txtregistration1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="50dp"
-        android:text="@string/registration"
+        android:text="@string/bankdetail"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="25sp"
@@ -50,88 +50,84 @@
 
 
         <EditText
-            android:id="@+id/editfname"
+            android:id="@+id/etacnam"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="115dp"
             android:layout_marginLeft="20dp"
-            android:hint="First Name" />
+            android:hint="@string/bankaccname" />
         <EditText
-            android:id="@+id/editlname"
+            android:id="@+id/etacnum"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="175dp"
             android:layout_marginLeft="20dp"
-            android:hint="Last Name" />
-
+            android:hint="@string/bankaccnum" />
         <EditText
-            android:id="@+id/editdob"
+            android:id="@+id/etifsc"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="235dp"
-            android:clickable="true"
-            android:hint="@string/dob"
-            android:ems="10"
-            android:inputType="date"
-            android:focusable="false"/>
+            android:layout_marginLeft="20dp"
+            android:hint="@string/bankifsc" />
         <EditText
-            android:id="@+id/editemail"
+            android:id="@+id/etbranch"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="295dp"
             android:layout_marginLeft="20dp"
-            android:hint="Email Id" />
+            android:hint="@string/bankbranch" />
         <EditText
-            android:id="@+id/editgender"
+            android:id="@+id/etbknam"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="355dp"
             android:layout_marginLeft="20dp"
-            android:hint="Gender" />
-        <EditText
-            android:id="@+id/editaddress"
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
+            android:hint="@string/bankname" />
+
+        <ImageView
+            android:id="@+id/imgpb"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="25dp"
             android:layout_marginTop="415dp"
-            android:layout_marginLeft="20dp"
-            android:hint="Address" />
+            android:background="@drawable/ic_baseline_photo_camera_24"
+            android:clickable="true" />
+        <ImageView
+            android:id="@+id/imgpbst"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="345dp"
+            android:background="@drawable/ic_baseline_cloud_upload_24"
+            android:layout_marginTop="465dp"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:text="@string/passbook"
+            android:id="@+id/txtpassbook"
+            android:textSize="19sp"
 
-        <EditText
-            android:id="@+id/editcity"
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="475dp"
-            android:hint="City"
-            android:maxLength="6" />
-
-        <EditText
-            android:id="@+id/editpincode"
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="535dp"
-            android:hint="Pincode"
-            android:maxLength="10" />
-
-        <EditText
-            android:id="@+id/editaltmob"
-            android:layout_width="370dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="590dp"
-            android:hint="Alternate Mobile"
-            android:maxLength="10" />
+            android:layout_marginTop="430dp"
+            android:layout_marginLeft="180dp"/>
         <Button
-            android:id="@+id/btstep1"
+            android:id="@+id/btbpupload"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="470dp"
+            android:layout_marginLeft="180dp"
+            android:textColor="@color/colorPrimaryLightDemo"
+            android:background="@drawable/backgroud_brown"
+            android:text="@string/upload"/>
+
+        <Button
+            android:id="@+id/btfinal"
             android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="655dp"
+            android:layout_marginTop="605dp"
             android:background="@drawable/backgroud_green"
             android:onClick="saveDriverRegistration"
-            android:text="@string/STEP_FIRST"
+            android:text="@string/final1"
             android:textColor="@color/colorOnPrimaryDemo" />
 
 
